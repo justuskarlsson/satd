@@ -1,0 +1,4 @@
+name: satd
+
+dependencies:
+  - python=3.10

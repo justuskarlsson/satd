@@ -1,0 +1,2144 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220214T100121_N0400_R122_T32TQM_20220214T133020.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 97.647095,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 34725,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220214T100121_034725_N04.00",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "4.0",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS2_20220214T133020_S20220214T100141_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-02-14T10:01:21.024Z",
+        "end_datetime": "2022-02-14T10:01:21.024Z",
+        "start_datetime": "2022-02-14T10:01:21.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220214T100121_N0400_R122_T32TQM_20220214T133020.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(90bdad4b-f55d-4806-8939-59a735656f0f)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(00f651b7-37a9-51ba-aa4f-a126a4fc437c)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/02/14/S2A_MSIL2A_20220214T100121_N0400_R122_T32TQM_20220214T133020.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2B_MSIL1C_20220219T100019_N0400_R122_T33TTG_20220219T104802.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.753932147167,
+              41.416483635939
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              11.407154253837,
+              41.471022555438
+            ],
+            [
+              11.420984719014,
+              41.468999760215
+            ],
+            [
+              11.607334097246,
+              41.441894349865
+            ],
+            [
+              11.607288114163,
+              41.441751680491
+            ],
+            [
+              11.60768614637,
+              41.4416934657
+            ],
+            [
+              11.607513643916,
+              41.441155284723
+            ],
+            [
+              11.607529557927,
+              41.441152941735
+            ],
+            [
+              11.607264194659,
+              41.440325252331
+            ],
+            [
+              11.753932147167,
+              41.416483635939
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 99.8889700740029,
+        "coordinates": "41.41648363593875,11.753932147167461 41.44032525233149,11.607264194659267 41.44115294173454,11.607529557927473 41.44115528472295,11.607513643915842 41.44169346569973,11.607686146369906 41.44175168049127,11.607288114162806 41.44189434986514,11.607334097246154 41.46899976021491,11.420984719013582 41.4710225554379,11.407154253837449 42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.41648363593875,11.753932147167461",
+        "orbitNumber": 25888,
+        "productType": "S2MSI1C",
+        "hvOrderTileid": "TG33T",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2B_20220219T100019_025888_N04.00",
+        "operationalMode": "INS-NOBS",
+        "processingLevel": "S2MSI1C",
+        "processorVersion": "4.0",
+        "granuleidentifier": "S2B_OPER_MSI_L1C_TL_VGS4_20220219T104802_A025888_T33TTG_N04.00",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2B_OPER_MSI_L1C_DS_VGS4_20220219T104802_S20220219T100021_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "B",
+        "datetime": "2022-02-19T10:00:19.024Z",
+        "end_datetime": "2022-02-19T10:00:19.024Z",
+        "start_datetime": "2022-02-19T10:00:19.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.416481018066406,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2B_MSIL1C_20220219T100019_N0400_R122_T33TTG_20220219T104802.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(444d2b82-e015-48c7-a074-3e55e02223d2)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(0b92c5ca-64dc-590e-89d1-b307ebb850a6)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L1C/2022/02/19/S2B_MSIL1C_20220219T100019_N0400_R122_T33TTG_20220219T104802.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220224T100031_N9999_R122_T33TTG_20221208T094520.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.3549542337723,
+              42.3947013941376
+            ],
+            [
+              11.4107313321483,
+              41.4077261901107
+            ],
+            [
+              12.7230334326652,
+              41.4412121669859
+            ],
+            [
+              12.6875927586039,
+              42.4293608723592
+            ],
+            [
+              11.3549542337723,
+              42.3947013941376
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "CLOUDFERRO",
+        "tileId": "33TTG",
+        "cloudCover": 99.5107647287169,
+        "orbitNumber": 34868,
+        "orbitDirection": "DESCENDING",
+        "processingDate": "2022-02-24T10:57:44+00:00",
+        "productGroupId": "GS2A_20220224T100031_034868_N04.00",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "99.99",
+        "platformShortName": "SENTINEL-2",
+        "datastripidentifier": "S2A_OPER_MSI_L1C_DS_VGS4_20220224T105744_S20220224T100409_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-02-24T10:00:31.024Z",
+        "end_datetime": "2022-02-24T10:00:31.024Z",
+        "start_datetime": "2022-02-24T10:00:31.024Z",
+        "productType": "S2MSI2A"
+      },
+      "bbox": [
+        11.3549542337723,
+        41.4077261901107,
+        12.7230334326652,
+        42.4293608723592
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220224T100031_N9999_R122_T33TTG_20221208T094520.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(29d8aa0f-85e2-45ba-bbb6-784e7515ad5b)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(0fd0d044-34fb-5d61-bc9d-7da27e9d3959)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/02/24/S2A_MSIL2A_20220224T100031_N9999_R122_T33TTG_20221208T094520.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220224T100031_N0400_R122_T32TQM_20220224T122415.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 92.898995,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 34868,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220224T100031_034868_N04.00",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "4.0",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS4_20220224T122415_S20220224T100409_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-02-24T10:00:31.024Z",
+        "end_datetime": "2022-02-24T10:00:31.024Z",
+        "start_datetime": "2022-02-24T10:00:31.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220224T100031_N0400_R122_T32TQM_20220224T122415.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(336a4287-9778-4163-a0f5-9c9bc07b82d2)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(11fd7b5d-e3ef-5630-958d-b3eb5846fbae)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/02/24/S2A_MSIL2A_20220224T100031_N0400_R122_T32TQM_20220224T122415.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2B_MSIL2A_20220130T100139_N0400_R122_T33TTG_20220130T115938.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              11.410731332148,
+              41.407726190111
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 55.36585999999999,
+        "coordinates": "42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.407726190110715,11.410731332148327 42.39470139413761,11.354954233772318",
+        "orbitNumber": 25602,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2B_20220130T100139_025602_N04.00",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "4.0",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2B_OPER_MSI_L2A_DS_VGS4_20220130T115938_S20220130T100140_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "B",
+        "datetime": "2022-01-30T10:01:39.024Z",
+        "end_datetime": "2022-01-30T10:01:39.024Z",
+        "start_datetime": "2022-01-30T10:01:39.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.40772247314453,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2B_MSIL2A_20220130T100139_N0400_R122_T33TTG_20220130T115938.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(428cfb52-96fa-4281-aaa4-38efe3a1e7b3)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(1c3cf940-1993-51b7-bf39-015502a90c26)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/30/S2B_MSIL2A_20220130T100139_N0400_R122_T33TTG_20220130T115938.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220214T100121_N0400_R122_T33TTG_20220214T133020.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              11.410731332148,
+              41.407726190111
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 98.01078999999999,
+        "coordinates": "42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.407726190110715,11.410731332148327 42.39470139413761,11.354954233772318",
+        "orbitNumber": 34725,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220214T100121_034725_N04.00",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "4.0",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS2_20220214T133020_S20220214T100141_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-02-14T10:01:21.024Z",
+        "end_datetime": "2022-02-14T10:01:21.024Z",
+        "start_datetime": "2022-02-14T10:01:21.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.40772247314453,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220214T100121_N0400_R122_T33TTG_20220214T133020.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(d9271412-b019-415d-91d9-7e73f8e8616c)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(43ecb84a-15f3-5be0-b9e0-19a2167cf715)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/02/14/S2A_MSIL2A_20220214T100121_N0400_R122_T33TTG_20220214T133020.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220224T100031_N0400_R122_T33TTG_20220224T122415.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              11.410731332148,
+              41.407726190111
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 93.616438,
+        "coordinates": "42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.407726190110715,11.410731332148327 42.39470139413761,11.354954233772318",
+        "orbitNumber": 34868,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220224T100031_034868_N04.00",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "4.0",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS4_20220224T122415_S20220224T100409_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-02-24T10:00:31.024Z",
+        "end_datetime": "2022-02-24T10:00:31.024Z",
+        "start_datetime": "2022-02-24T10:00:31.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.40772247314453,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220224T100031_N0400_R122_T33TTG_20220224T122415.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(4bc89fe1-8ce7-44c0-99a4-4d9840349694)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(7e38f880-097c-54af-88f8-e3fdd37ecac6)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/02/24/S2A_MSIL2A_20220224T100031_N0400_R122_T33TTG_20220224T122415.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220105T100411_N0301_R122_T33TTG_20220105T114535.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              11.410731332148,
+              41.407726190111
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 47.99477,
+        "coordinates": "42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.407726190110715,11.410731332148327 42.39470139413761,11.354954233772318",
+        "orbitNumber": 34153,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220105T100411_034153_N03.01",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "3.01",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS4_20220105T114535_S20220105T100412_N03.01",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-05T10:04:11.024Z",
+        "end_datetime": "2022-01-05T10:04:11.024Z",
+        "start_datetime": "2022-01-05T10:04:11.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.40772247314453,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220105T100411_N0301_R122_T33TTG_20220105T114535.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(74882aa1-a994-47f6-9ed6-245b63d00bc6)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(8a17d082-736e-5468-8371-b4f63e1dcaa5)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/05/S2A_MSIL2A_20220105T100411_N0301_R122_T33TTG_20220105T114535.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220125T100311_N0400_R122_T32TQM_20220125T134241.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 1.659725,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 34439,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220125T100311_034439_N04.00",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "4.0",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS2_20220125T134241_S20220125T100333_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-25T10:03:11.024Z",
+        "end_datetime": "2022-01-25T10:03:11.024Z",
+        "start_datetime": "2022-01-25T10:03:11.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220125T100311_N0400_R122_T32TQM_20220125T134241.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(82f624eb-fef3-415d-8b06-c89b97de6886)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(acb0f2ac-d624-5415-8de8-c4e2476f15d3)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/25/S2A_MSIL2A_20220125T100311_N0400_R122_T32TQM_20220125T134241.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2B_MSIL1C_20220130T100139_N0400_R122_T32TQM_20220130T105555.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 47.9503120427603,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 25602,
+        "productType": "S2MSI1C",
+        "hvOrderTileid": "TM32Q",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2B_20220130T100139_025602_N04.00",
+        "operationalMode": "INS-NOBS",
+        "processingLevel": "S2MSI1C",
+        "processorVersion": "4.0",
+        "granuleidentifier": "S2B_OPER_MSI_L1C_TL_VGS4_20220130T105555_A025602_T32TQM_N04.00",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2B_OPER_MSI_L1C_DS_VGS4_20220130T105555_S20220130T100140_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "B",
+        "datetime": "2022-01-30T10:01:39.024Z",
+        "end_datetime": "2022-01-30T10:01:39.024Z",
+        "start_datetime": "2022-01-30T10:01:39.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2B_MSIL1C_20220130T100139_N0400_R122_T32TQM_20220130T105555.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(30f39797-aa84-4d6b-acdb-4aab800ccb3b)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(cadda55b-8da5-5030-92c8-eda15c78cf5f)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L1C/2022/01/30/S2B_MSIL1C_20220130T100139_N0400_R122_T32TQM_20220130T105555.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL1C_20220125T100311_N0400_R122_T32TQM_20220125T122447.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 0.0649168383648362,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 34439,
+        "productType": "S2MSI1C",
+        "hvOrderTileid": "TM32Q",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220125T100311_034439_N04.00",
+        "operationalMode": "INS-NOBS",
+        "processingLevel": "S2MSI1C",
+        "processorVersion": "4.0",
+        "granuleidentifier": "S2A_OPER_MSI_L1C_TL_VGS2_20220125T122447_A034439_T32TQM_N04.00",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L1C_DS_VGS2_20220125T122447_S20220125T100333_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-25T10:03:11.024Z",
+        "end_datetime": "2022-01-25T10:03:11.024Z",
+        "start_datetime": "2022-01-25T10:03:11.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL1C_20220125T100311_N0400_R122_T32TQM_20220125T122447.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(78b158fb-ae84-480d-ab90-861ef97d084d)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(fb60fb00-53a2-5905-b1e7-2b3ffbe431aa)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L1C/2022/01/25/S2A_MSIL1C_20220125T100311_N0400_R122_T32TQM_20220125T122447.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220125T100311_N9999_R122_T32TQM_20230116T161334.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.4307104530335,
+              42.4269119959736
+            ],
+            [
+              11.3934607768352,
+              41.4388462447947
+            ],
+            [
+              12.7055622985413,
+              41.4040347461201
+            ],
+            [
+              12.7631364327049,
+              42.3908806623885
+            ],
+            [
+              11.4307104530335,
+              42.4269119959736
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "CLOUDFERRO",
+        "tileId": "32TQM",
+        "cloudCover": 0.0649168383648362,
+        "orbitNumber": 34439,
+        "orbitDirection": "DESCENDING",
+        "processingDate": "2022-01-25T12:24:47+00:00",
+        "productGroupId": "GS2A_20220125T100311_034439_N04.00",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "99.99",
+        "platformShortName": "SENTINEL-2",
+        "datastripidentifier": "S2A_OPER_MSI_L1C_DS_VGS2_20220125T122447_S20220125T100333_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-25T10:03:11.024Z",
+        "end_datetime": "2022-01-25T10:03:11.024Z",
+        "start_datetime": "2022-01-25T10:03:11.024Z",
+        "productType": "S2MSI2A"
+      },
+      "bbox": [
+        11.3934607768352,
+        41.4040347461201,
+        12.7631364327049,
+        42.4269119959736
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220125T100311_N9999_R122_T32TQM_20230116T161334.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(29549afa-23dd-48ba-a822-7bdafdc4ce90)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(11f44c15-202e-5096-80a2-cd141ceba4f1)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/25/S2A_MSIL2A_20220125T100311_N9999_R122_T32TQM_20230116T161334.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL1C_20220125T100311_N0400_R122_T33TTG_20220125T122447.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              11.410731332148,
+              41.407726190111
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 0.0578996088267789,
+        "coordinates": "42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.407726190110715,11.410731332148327 42.39470139413761,11.354954233772318",
+        "orbitNumber": 34439,
+        "productType": "S2MSI1C",
+        "hvOrderTileid": "TG33T",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220125T100311_034439_N04.00",
+        "operationalMode": "INS-NOBS",
+        "processingLevel": "S2MSI1C",
+        "processorVersion": "4.0",
+        "granuleidentifier": "S2A_OPER_MSI_L1C_TL_VGS2_20220125T122447_A034439_T33TTG_N04.00",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L1C_DS_VGS2_20220125T122447_S20220125T100333_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-25T10:03:11.024Z",
+        "end_datetime": "2022-01-25T10:03:11.024Z",
+        "start_datetime": "2022-01-25T10:03:11.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.40772247314453,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL1C_20220125T100311_N0400_R122_T33TTG_20220125T122447.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(df48b8b7-f23e-4919-9bba-2661a13f1ea2)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(29730983-09d5-547d-ae2e-eabfdd6cd256)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L1C/2022/01/25/S2A_MSIL1C_20220125T100311_N0400_R122_T33TTG_20220125T122447.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220125T100311_N0400_R122_T33TTG_20220125T134241.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              11.410731332148,
+              41.407726190111
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 1.5587149999999999,
+        "coordinates": "42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.407726190110715,11.410731332148327 42.39470139413761,11.354954233772318",
+        "orbitNumber": 34439,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220125T100311_034439_N04.00",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "4.0",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS2_20220125T134241_S20220125T100333_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-25T10:03:11.024Z",
+        "end_datetime": "2022-01-25T10:03:11.024Z",
+        "start_datetime": "2022-01-25T10:03:11.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.40772247314453,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220125T100311_N0400_R122_T33TTG_20220125T134241.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(adf32f2f-2315-4905-86b4-734bd7d1e088)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(5e737a99-e0f8-50c8-8866-6021bdba4552)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/25/S2A_MSIL2A_20220125T100311_N0400_R122_T33TTG_20220125T134241.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL1C_20220224T100031_N0400_R122_T33TTG_20220224T105744.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.354954233772,
+              42.394701394138
+            ],
+            [
+              11.410731332148,
+              41.407726190111
+            ],
+            [
+              12.723033432665,
+              41.441212166986
+            ],
+            [
+              12.687592758604,
+              42.429360872359
+            ],
+            [
+              11.354954233772,
+              42.394701394138
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "33TTG",
+        "authority": "ESA",
+        "cloudCover": 99.5107647287169,
+        "coordinates": "42.39470139413761,11.354954233772318 42.42936087235922,12.687592758603905 41.441212166985935,12.723033432665233 41.407726190110715,11.410731332148327 42.39470139413761,11.354954233772318",
+        "orbitNumber": 34868,
+        "productType": "S2MSI1C",
+        "hvOrderTileid": "TG33T",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220224T100031_034868_N04.00",
+        "operationalMode": "INS-NOBS",
+        "processingLevel": "S2MSI1C",
+        "processorVersion": "4.0",
+        "granuleidentifier": "S2A_OPER_MSI_L1C_TL_VGS4_20220224T105744_A034868_T33TTG_N04.00",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L1C_DS_VGS4_20220224T105744_S20220224T100409_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-02-24T10:00:31.024Z",
+        "end_datetime": "2022-02-24T10:00:31.024Z",
+        "start_datetime": "2022-02-24T10:00:31.024Z"
+      },
+      "bbox": [
+        11.35495376586914,
+        41.40772247314453,
+        12.723033905029297,
+        42.42936325073242
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL1C_20220224T100031_N0400_R122_T33TTG_20220224T105744.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(5e3b953a-ee72-49ea-ba55-90e50921ced2)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(77309406-ae8d-500d-91aa-ab528f389608)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L1C/2022/02/24/S2A_MSIL1C_20220224T100031_N0400_R122_T33TTG_20220224T105744.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220125T100311_N9999_R122_T33TTG_20230116T103710.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.3549542337723,
+              42.3947013941376
+            ],
+            [
+              11.4107313321483,
+              41.4077261901107
+            ],
+            [
+              12.7230334326652,
+              41.4412121669859
+            ],
+            [
+              12.6875927586039,
+              42.4293608723592
+            ],
+            [
+              11.3549542337723,
+              42.3947013941376
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "CLOUDFERRO",
+        "tileId": "33TTG",
+        "cloudCover": 0.0578996088267789,
+        "orbitNumber": 34439,
+        "orbitDirection": "DESCENDING",
+        "processingDate": "2022-01-25T12:24:47+00:00",
+        "productGroupId": "GS2A_20220125T100311_034439_N04.00",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "99.99",
+        "platformShortName": "SENTINEL-2",
+        "datastripidentifier": "S2A_OPER_MSI_L1C_DS_VGS2_20220125T122447_S20220125T100333_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-25T10:03:11.024Z",
+        "end_datetime": "2022-01-25T10:03:11.024Z",
+        "start_datetime": "2022-01-25T10:03:11.024Z",
+        "productType": "S2MSI2A"
+      },
+      "bbox": [
+        11.3549542337723,
+        41.4077261901107,
+        12.7230334326652,
+        42.4293608723592
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220125T100311_N9999_R122_T33TTG_20230116T103710.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(9323705c-024b-4e67-bcdf-5258f377966c)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(81f0ffcc-e96e-5c3f-82a0-0d69bca3c025)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/25/S2A_MSIL2A_20220125T100311_N9999_R122_T33TTG_20230116T103710.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220115T100351_N0301_R122_T32TQM_20220115T114613.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 0.28757,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 34296,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2A_20220115T100351_034296_N03.01",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "3.01",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2A_OPER_MSI_L2A_DS_VGS4_20220115T114613_S20220115T100348_N03.01",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-15T10:03:51.024Z",
+        "end_datetime": "2022-01-15T10:03:51.024Z",
+        "start_datetime": "2022-01-15T10:03:51.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220115T100351_N0301_R122_T32TQM_20220115T114613.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(0c125590-d5b8-41c6-aacf-181c67c83701)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(c7d9d7a1-c281-52cb-bc00-bfa2a708dc6b)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/15/S2A_MSIL2A_20220115T100351_N0301_R122_T32TQM_20220115T114613.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2B_MSIL1C_20220209T100049_N0400_R122_T32TQM_20220209T104141.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 0.0,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 25745,
+        "productType": "S2MSI1C",
+        "hvOrderTileid": "TM32Q",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2B_20220209T100049_025745_N04.00",
+        "operationalMode": "INS-NOBS",
+        "processingLevel": "S2MSI1C",
+        "processorVersion": "4.0",
+        "granuleidentifier": "S2B_OPER_MSI_L1C_TL_VGS4_20220209T104141_A025745_T32TQM_N04.00",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2B_OPER_MSI_L1C_DS_VGS4_20220209T104141_S20220209T100045_N04.00",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "B",
+        "datetime": "2022-02-09T10:00:49.024Z",
+        "end_datetime": "2022-02-09T10:00:49.024Z",
+        "start_datetime": "2022-02-09T10:00:49.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2B_MSIL1C_20220209T100049_N0400_R122_T32TQM_20220209T104141.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(fc8b2265-bb83-43a9-b1f9-d8e8fbed907c)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(f9f4e8ba-d790-5a09-82e0-06f53e1ccaef)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L1C/2022/02/09/S2B_MSIL1C_20220209T100049_N0400_R122_T32TQM_20220209T104141.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2A_MSIL2A_20220115T100351_N9999_R122_T32TQM_20221123T182345.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.4307104530335,
+              42.4269119959736
+            ],
+            [
+              11.3934607768352,
+              41.4388462447947
+            ],
+            [
+              12.7055622985413,
+              41.4040347461201
+            ],
+            [
+              12.7631364327049,
+              42.3908806623885
+            ],
+            [
+              11.4307104530335,
+              42.4269119959736
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "CLOUDFERRO",
+        "tileId": "32TQM",
+        "cloudCover": 0.0,
+        "orbitNumber": 34296,
+        "orbitDirection": "DESCENDING",
+        "processingDate": "2022-01-15T10:57:59+00:00",
+        "productGroupId": "GS2A_20220115T100351_034296_N03.01",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "99.99",
+        "platformShortName": "SENTINEL-2",
+        "datastripidentifier": "S2A_OPER_MSI_L1C_DS_VGS4_20220115T105759_S20220115T100348_N03.01",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "A",
+        "datetime": "2022-01-15T10:03:51.024Z",
+        "end_datetime": "2022-01-15T10:03:51.024Z",
+        "start_datetime": "2022-01-15T10:03:51.024Z",
+        "productType": "S2MSI2A"
+      },
+      "bbox": [
+        11.3934607768352,
+        41.4040347461201,
+        12.7631364327049,
+        42.4269119959736
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2A_MSIL2A_20220115T100351_N9999_R122_T32TQM_20221123T182345.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(71a9613c-a736-4a6d-90af-518c9a90ab25)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(1a297c86-0d9c-57a5-99ae-fbcd926359b7)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/15/S2A_MSIL2A_20220115T100351_N9999_R122_T32TQM_20221123T182345.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [
+        "https://stac-extensions.github.io/alternate-assets/v1.1.0/schema.json",
+        "https://stac-extensions.github.io/storage/v1.0.0/schema.json"
+      ],
+      "id": "S2B_MSIL2A_20220120T100229_N0301_R122_T32TQM_20220120T113838.SAFE",
+      "collection": "SENTINEL-2",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              11.430710453033,
+              42.426911995974
+            ],
+            [
+              11.393460776835,
+              41.438846244795
+            ],
+            [
+              12.705562298541,
+              41.40403474612
+            ],
+            [
+              12.763136432705,
+              42.390880662389
+            ],
+            [
+              11.430710453033,
+              42.426911995974
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "origin": "ESA",
+        "tileId": "32TQM",
+        "authority": "ESA",
+        "cloudCover": 62.496359999999996,
+        "coordinates": "42.426911995973605,11.430710453033498 42.39088066238852,12.763136432704886 41.40403474612011,12.705562298541299 41.43884624479472,11.393460776835221 42.426911995973605,11.430710453033498",
+        "orbitNumber": 25459,
+        "productType": "S2MSI2A",
+        "orbitDirection": "DESCENDING",
+        "productGroupId": "GS2B_20220120T100229_025459_N03.01",
+        "operationalMode": "",
+        "processingLevel": "S2MSI2A",
+        "processorVersion": "3.01",
+        "platformShortName": "SENTINEL-2",
+        "spatialResolution": 60.0,
+        "datastripidentifier": "S2B_OPER_MSI_L2A_DS_VGS4_20220120T113838_S20220120T100227_N03.01",
+        "instrumentShortName": "MSI",
+        "relativeOrbitNumber": 122,
+        "platformSerialIdentifier": "B",
+        "datetime": "2022-01-20T10:02:29.024Z",
+        "end_datetime": "2022-01-20T10:02:29.024Z",
+        "start_datetime": "2022-01-20T10:02:29.024Z"
+      },
+      "bbox": [
+        11.393460273742676,
+        41.40403366088867,
+        12.763136863708496,
+        42.42691421508789
+      ],
+      "links": [
+        {
+          "rel": "root",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac"
+        },
+        {
+          "rel": "self",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items/S2B_MSIL2A_20220120T100229_N0301_R122_T32TQM_20220120T113838.SAFE"
+        },
+        {
+          "rel": "collection",
+          "type": "application/json",
+          "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+        }
+      ],
+      "assets": {
+        "QUICKLOOK": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Assets(a195178e-0d6e-408f-b12c-d1302c9ca3ed)/$value",
+          "title": "QUICKLOOK",
+          "type": "image/jpeg"
+        },
+        "PRODUCT": {
+          "href": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products(4062c620-8f79-51f0-b488-8efad2c5ff47)/$value",
+          "title": "Product",
+          "type": "application/octet-stream",
+          "alternate": {
+            "s3": {
+              "href": "/eodata/Sentinel-2/MSI/L2A/2022/01/20/S2B_MSIL2A_20220120T100229_N0301_R122_T32TQM_20220120T113838.SAFE",
+              "storage:platform": "CLOUDFERRO",
+              "storage:region": "waw",
+              "storage:requester_pays": false,
+              "storage:tier": "Online"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "links": [
+    {
+      "rel": "next",
+      "type": "application/json",
+      "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items?page=2&bbox=12.41%2C41.8%2C12.52%2C41.9&datetime=2022-01-01%2F2022-03-01"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2/items?bbox=12.41,41.8,12.52,41.9&datetime=2022-01-01/2022-03-01"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "https://catalogue.dataspace.copernicus.eu/stac"
+    },
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "https://catalogue.dataspace.copernicus.eu/stac/collections/SENTINEL-2"
+    }
+  ]
+}
