@@ -1,3 +1,5 @@
 __pycache__
 resources/images
 *.egg-info/
+.env
+Sentinel-2
