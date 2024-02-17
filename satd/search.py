@@ -10,32 +10,20 @@ stac_endpoint = "https://catalogue.dataspace.copernicus.eu/stac/collections"
 class Feature:
     def __init__(self, data):
         self.data = data
+        self.properties = self.data["properties"]
+        self.datetime = self.properties["datetime"]
+        self.cloud_cover = self.properties["cloudCover"]
+        self.is_2a = self.properties["productType"].endswith("2A")
+        self.quicklook_href = ""
+        if "QUICKLOOK" in self.data["assets"]:
+            self.quicklook_href = self.data["assets"]["QUICKLOOK"]["href"]
+        self.product = self.data["assets"]["PRODUCT"]
+        self.product_s3_href = self.product["alternate"]["s3"]["href"]
 
-    @property
-    def properties(self):
-        return self.data["properties"]
-    
-    @property
-    def datetime(self):
-        return self.properties['datetime']
-
-    @property
-    def quicklook_href(self):
-        if "QUICKLOOK" not in self.data["assets"]:
-            return ""
-        return self.data["assets"]["QUICKLOOK"]["href"]
-
-    @property
-    def product(self):
-        return self.data["assets"]["PRODUCT"]
-
-    @property
-    def product_s3_href(self):
-        return self.product["alternate"]["s3"]["href"]
 
     def __str__(self):
         return f"({self.datetime}) thumbnail: {self.quicklook_href}"
-    
+
     def __lt__(self, other):
         return self.datetime < other.datetime
 
@@ -61,9 +49,13 @@ def search(
     limit=100,
     sensor="SENTINEL-2",
 ):
-
+    print("Search:", bbox, time_range)
     # Construct the search query
-    search_params = {"bbox": ",".join([str(x) for x in bbox]), "datetime": time_range, "limit": limit}
+    search_params = {
+        "bbox": ",".join([str(x) for x in bbox]),
+        "datetime": time_range,
+        "limit": limit,
+    }
 
     url = f"{stac_endpoint}/{sensor}/items?"
 

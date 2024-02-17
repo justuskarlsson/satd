@@ -13,9 +13,8 @@ PREVIEW_WIDTH = 512
 PREVIEW_HEIGHT = 512
 
 
-
-
 dpg.create_context()
+
 
 class SearchVis:
     features: list[Feature] = []
@@ -23,7 +22,16 @@ class SearchVis:
     idx: int = 0
 
     def set_collection(self, features: list[Feature]):
-        self.features = features
+
+        self.features = []
+        only_2a = dpg.get_value("2A")
+        max_cloud = dpg.get_value("max_cloud")
+        for feature in features:
+            if only_2a and not feature.is_2a:
+                continue
+            if feature.cloud_cover > max_cloud:
+                continue
+            self.features.append(feature)
         self.features.sort(reverse=True)
         self.imgs = [None] * len(features)
         self.load()
@@ -46,7 +54,6 @@ class SearchVis:
             self.imgs[self.idx] = rgba
         dpg.set_value("texture", self.imgs[self.idx])
 
-
     def prev(self):
         self.idx = max(0, self.idx - 1)
         self.load()
@@ -55,13 +62,18 @@ class SearchVis:
         self.idx = min(len(self.features) - 1, self.idx + 1)
         self.load()
 
+
 search_vis = SearchVis()
 
-def search_callback():
-    lkpg = [15.618669973441541, 58.40504766611348, 15.628669973441541, 58.41504766611348]
-    collection = search(bbox=lkpg, time_range="2023-12-01/2024-02-17")
-    search_vis.set_collection(collection.features)
 
+def search_callback():
+    time_range = dpg.get_value("time_start") + "/" + dpg.get_value("time_end")
+    east = dpg.get_value("bbox_center_east")
+    north = dpg.get_value("bbox_center_north")
+    size = dpg.get_value("bbox_size")
+    bbox = [east - size, north - size, east + size, north + size]
+    collection = search(bbox=bbox, time_range=time_range)
+    search_vis.set_collection(collection.features)
 
 
 with dpg.texture_registry(show=False):
@@ -75,13 +87,34 @@ with dpg.texture_registry(show=False):
     )
 
 
-with dpg.window(label="Preview", width=PREVIEW_WIDTH, height=PREVIEW_HEIGHT, pos=(WIDTH-PREVIEW_WIDTH, 0)):
+with dpg.window(
+    label="Preview",
+    width=PREVIEW_WIDTH,
+    height=PREVIEW_HEIGHT,
+    pos=(WIDTH - PREVIEW_WIDTH, 0),
+):
     dpg.add_text("0/0", tag="idx")
     dpg.add_text("", tag="date")
     dpg.add_image("texture")
 
 with dpg.window(label="Search", width=300, height=HEIGHT, pos=(0, 0)):
+    dpg.add_input_text(default_value="2023-12-01", label="Time Start", tag="time_start")
+    dpg.add_input_text(default_value="2024-02-17", label="Time End", tag="time_end")
+    dpg.add_input_float(default_value=1000 * 1e-5, label="Size [m]", tag="bbox_size")
+    dpg.add_input_float(
+        default_value=15.612147, label="East", tag="bbox_center_east"
+    )
+    dpg.add_input_float(
+        default_value=58.419165, label="North", tag="bbox_center_north"
+    )
     dpg.add_button(label="Search", callback=search_callback)
+
+    dpg.add_input_float(
+        label="Max Cloud", default_value=50.0, tag="max_cloud"
+    )
+    dpg.add_checkbox(
+        label="2A", default_value=True, tag="2A"
+    )
 
 with dpg.handler_registry():
     dpg.add_key_press_handler(dpg.mvKey_M, callback=search_vis.prev)
