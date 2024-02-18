@@ -4,3 +4,4 @@ dearpygui
 Pillow
 boto3
 python-dotenv
+rasterio

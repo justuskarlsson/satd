@@ -8,6 +8,7 @@ from satd.search import search, Feature
 import os
 import boto3
 from dotenv import load_dotenv
+import rasterio
 
 load_dotenv()
 download_dir = os.path.realpath(Path(__file__).parent / "../../data")
@@ -43,12 +44,7 @@ def download(href):
         # Bands meaning 02-04 = BGR 
         # https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/bands/
         if file.key.endswith(".jp2"):
-            jpeg_path = file.key.replace(".jp2", ".jpg")
-            
-            os.system(f"ffmpeg -i {file.key} {jpeg_path}")
-            print(jpeg_path)
-            os.unlink(file.key)
-
+            print("Downloading:", file.key)
 
 
 dpg.create_context()
