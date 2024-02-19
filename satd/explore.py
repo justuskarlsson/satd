@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 import rasterio
 
 load_dotenv()
-download_dir = os.path.realpath(Path(__file__).parent / "../../data")
+download_dir = "/data/sentinel-2"
 
 
 WIDTH = 1920
@@ -23,8 +23,8 @@ PREVIEW_HEIGHT = 512
 s3_session = boto3.session.Session()
 
 
-def download(href):
-    product = href.split("/eodata/")[1]
+def download(feature: Feature):
+    product = feature.product_s3_href.split("/eodata/")[1]
     s3 = boto3.resource(
         "s3",
         endpoint_url=os.environ["endpoint_url"],
@@ -36,16 +36,19 @@ def download(href):
     files = bucket.objects.filter(Prefix=product)
     if not list(files):
         raise FileNotFoundError(f"Could not find any files for {product}")
+    dst_dir = f"{download_dir}/{feature.id}"
     for file in files:
-        os.makedirs(os.path.dirname(file.key), exist_ok=True)
-        if not os.path.isdir(file.key):
-            bucket.download_file(file.key, f"{file.key}")
+        rel_path = file.key.split(".SAFE/")[1]
+        dst_path = os.path.join(dst_dir, rel_path)
+        if not os.path.isdir(dst_path):
+            os.makedirs(os.path.dirname(dst_path), exist_ok=True)
+            bucket.download_file(file.key, dst_path)
         
         # Bands meaning 02-04 = BGR 
         # https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/bands/
         if file.key.endswith(".jp2"):
-            print("Downloading:", file.key)
-
+            print("Downloading to:", dst_path)
+    print("Download done!")
 
 dpg.create_context()
 
@@ -71,7 +74,7 @@ class SearchVis:
         self.load()
 
     def download(self):
-        download(self.features[self.idx].product_s3_href)
+        download(self.features[self.idx])
 
     def load(self):
         if self.idx > len(self.features) - 1:

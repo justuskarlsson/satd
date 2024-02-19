@@ -1,3 +1,8 @@
+"""
+Look at:
+https://github.com/langnico/global-canopy-height-model/blob/main/gchm/utils/gdal_process.py
+"""
+
 import rasterio
 from osgeo import gdal
 from PIL import Image
@@ -11,13 +16,15 @@ path = directory + "/T33VWE_20230615T102031_B{:02d}_10m.jp2"
 def normalize_uint8(data):
     data = data.astype(np.float32)
     data = data / (1<<14)
-    data = np.clip(data * 255.0 * 3.0, a_min=0.0, a_max=255.0)
+    data = np.clip(data * 255.0 / 0.3, a_min=0.0, a_max=255.0)
     data = data.astype(np.uint8)
     data = np.expand_dims(data, 2)
     return data
 
 def read_lev(band, lev=2):
-    ds = gdal.Open(path.format(band))
+    band_path = path.format(band)
+    print(band_path)
+    ds = gdal.Open(band_path)
     band = ds.GetRasterBand(1)
     if lev >= 0:
         ov = band.GetOverview(lev)

@@ -10,6 +10,7 @@ stac_endpoint = "https://catalogue.dataspace.copernicus.eu/stac/collections"
 class Feature:
     def __init__(self, data):
         self.data = data
+        self.id = data["id"]
         self.properties = self.data["properties"]
         self.datetime = self.properties["datetime"]
         self.cloud_cover = self.properties["cloudCover"]
