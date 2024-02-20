@@ -1,19 +1,29 @@
-from satd.db.db_utils import Table, field, PRIMARY_KEY, dataclass, init_db, db
+from satd.db.geo_table import GeoTable, dataclass, Bbox
 from satd.search import Feature
 
-@dataclass(kw_only=True)
-class SentinelImage(Table):
-    meta_geo_index = True
 
-    id: int = field(default=-1, metadata={PRIMARY_KEY: True})
+@dataclass(kw_only=True)
+class SentinelImage(GeoTable):
     id_str: str
     date: str
+
+    # s3_href: str
 
     @staticmethod
     def from_feature(feature: Feature):
         return SentinelImage(
             id_str=feature.id,
             date=feature.datetime,
+        )
+
+    @staticmethod
+    def from_json(data):
+        return SentinelImage(
+            id_str=data["id"],
+            cloud_cover=data["properties"]["cloudCover"],
+            datetime=data["properties"]["datetime"],
+            product_type=data["properties"]["productType"],
+            bbox=data["bbox"],
         )
 
 
@@ -23,12 +33,16 @@ __all__ = [
 
 if __name__ == "__main__":
     import sqlite3
+
     # init_db("/data/sentinel-2/index.db")
     SentinelImage.create_table()
-    SentinelImage.insert_many([
-        SentinelImage(id_str="a0", date="2024-23"),
-        SentinelImage(id_str="a1", date="2024-12")
-    ])
-    SentinelImage.insert(SentinelImage(id_str="b0", date="2024-01"))
-    res = SentinelImage.select()
-    print(res)
+    # SentinelImage.insert_many(
+    #     [
+    #         SentinelImage(id_str="a0", date="2024-23", bbox=Bbox(0, 0, 2, 2)),
+    #         SentinelImage(id_str="a1", date="2024-12", bbox=Bbox(0, 0, 2, 2)),
+    #     ]
+    # )
+    SentinelImage.insert(SentinelImage(id_str="b0", date="2024-01", bbox=Bbox(0, 0, 4, 4)))
+    SentinelImage.insert(SentinelImage(id_str="b0", date="2024-01", bbox=Bbox(14, 57, 16, 59)))
+    print("Select all:\n", SentinelImage.select())
+    print("Select (15, 58):\n", SentinelImage.select_point((15, 58)))

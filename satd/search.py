@@ -67,7 +67,10 @@ def search(
         print("Failed to fetch data:", response.status_code)
         return []
 
-    collection = FeatureCollection(response.json())
+    data = response.json()
+    collection = FeatureCollection(data)
+    with open("feature_collection.json", "w") as f:
+        json.dump(data, f, indent=2)
 
     return collection
 
