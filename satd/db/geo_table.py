@@ -34,7 +34,6 @@ class Bbox(namedtuple("Bbox", ["min_x", "min_y", "max_x", "max_y"])):
 
 type_mapping[Bbox] = "TEXT"
 
-
 @dataclass(kw_only=True)
 class GeoTable(Table):
     id: int = field(default=-1, metadata={PRIMARY_KEY: True})
