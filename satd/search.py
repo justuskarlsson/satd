@@ -50,6 +50,9 @@ def search(
     limit=100,
     sensor="SENTINEL-2",
 ):
+    with open("resources/feature_collection.json") as f:
+        data = json.load(f)
+        return FeatureCollection(data)
     print("Search:", bbox, time_range)
     # Construct the search query
     search_params = {
@@ -69,8 +72,8 @@ def search(
 
     data = response.json()
     collection = FeatureCollection(data)
-    with open("feature_collection.json", "w") as f:
-        json.dump(data, f, indent=2)
+    # with open("feature_collection.json", "w") as f:
+    #     json.dump(data, f, indent=2)
 
     return collection
 

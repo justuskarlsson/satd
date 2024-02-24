@@ -10,9 +10,6 @@ class SentinelImage(GeoTable):
     product_type: str
     s3_href: str
 
-
-
-
     @staticmethod
     def from_feature(feature: Feature):
         return SentinelImage(

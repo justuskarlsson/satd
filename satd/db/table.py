@@ -26,8 +26,6 @@ def type_to_sqlite_type(t):
 def str_join(*args, sep=" "):
     return sep.join([str(x) for x in args if x is not None])
 
-db: Connection = sqlite3.connect(":memory:")
-
 
 
 @dataclass
@@ -46,13 +44,13 @@ class Table:
             )
             field_statements.append(statement)
         statement = str_join(
-            f"CREATE TABLE {table_name}(",
+            f"CREATE TABLE IF NOT EXISTS {table_name}(",
             "  " + ",\n  ".join(field_statements),
             ");",
             sep="\n",
         )
-        db.execute(statement)
-        db.commit()
+        get_db().execute(statement)
+        get_db().commit()
 
     @classmethod
     def _get_insert_row(cls, obj):
@@ -82,8 +80,8 @@ class Table:
     #         f"INSERT INTO {cls.__name__} ({', '.join(field_names)}) VALUES ({qs});"
     #     )
     #     print(statement, rows)
-    #     db.executemany(statement, rows)
-    #     db.commit()
+    #     get_db().executemany(statement, rows)
+    #     get_db().commit()
 
     @classmethod
     def insert(cls, obj):
@@ -96,8 +94,8 @@ class Table:
         statement = (
             f"INSERT INTO {cls.__name__} ({', '.join(field_names)}) VALUES ({qs});"
         )
-        cur = db.execute(statement, row)
-        db.commit()
+        cur = get_db().execute(statement, row)
+        get_db().commit()
         return cur.lastrowid
 
 
@@ -122,13 +120,23 @@ class Table:
     def select(cls):
         field_names = [field.name for field in fields(cls)]
         statement = f"SELECT {' ,'.join(field_names)} FROM {cls.__name__};"
-        return cls._extract_rows(db.execute(statement).fetchall())
+        return cls._extract_rows(get_db().execute(statement).fetchall())
 
+    @classmethod
+    def contains(cls, id, id_key: str ="id"):
+        statement = f"SELECT id FROM {cls.__name__} WHERE {id_key}=?;"
+        res = get_db().execute(statement, [id]).fetchall()
+        return len(res) > 0
+
+
+db: Connection = sqlite3.connect(":memory:")
 
 def init_db(db_path: str):
     global db
     db = sqlite3.connect(db_path)
 
+def get_db():
+    return db
 
 if __name__ == "__main__":
     table = Table(1)

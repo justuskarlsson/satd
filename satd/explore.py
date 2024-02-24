@@ -10,6 +10,8 @@ import boto3
 from dotenv import load_dotenv
 import rasterio
 
+import satd.db as db
+
 load_dotenv()
 download_dir = "/data/sentinel-2"
 
@@ -22,8 +24,23 @@ PREVIEW_HEIGHT = 512
 
 s3_session = boto3.session.Session()
 
+# in memory for now
 
+first = True
 def download(feature: Feature):
+    global first
+    if first:
+        db.init_db("/data/sentinel-2/index.db")
+        db.SentinelImage.create_table()
+        first = False
+
+    if db.SentinelImage.contains(feature.id, "id_str"):
+        print(f"{feature.id} already in db")
+        return
+    else:
+        print(f"Adding {feature.id}")
+        row = db.SentinelImage.from_json(feature.data)
+        db.SentinelImage.insert(row)
     product = feature.product_s3_href.split("/eodata/")[1]
     s3 = boto3.resource(
         "s3",
@@ -75,6 +92,12 @@ class SearchVis:
 
     def download(self):
         download(self.features[self.idx])
+
+    def download_all(self):
+        for i, feature in enumerate(self.features):
+            download(feature)
+            print(f"{i+1:02d}/{len(self.features):02d} downloaded..")
+
 
     def load(self):
         if self.idx > len(self.features) - 1:
@@ -136,6 +159,7 @@ with dpg.window(
     dpg.add_text("0/0", tag="idx")
     dpg.add_text("", tag="date")
     dpg.add_button(label="Download", callback=search_vis.download)
+    dpg.add_button(label="Download All", callback=search_vis.download_all)
     dpg.add_image("texture")
 
 with dpg.window(label="Search", width=300, height=HEIGHT, pos=(0, 0)):

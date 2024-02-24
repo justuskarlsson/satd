@@ -1,8 +1,6 @@
 from satd.db.table import (
     Table,
-    str_join,
-    sqlite3,
-    db,
+    get_db,
     dataclass,
     fields,
     field,
@@ -50,16 +48,17 @@ class GeoTable(Table):
             f"CREATE VIRTUAL TABLE IF NOT EXISTS {cls.index_name()} "
             + "USING rtree(id, min_x, max_x, min_y, max_y);"
         )
-        db.execute(statement)
-        db.commit()
+        get_db().execute(statement)
+        get_db().commit()
 
     @classmethod
     def insert(cls, obj):
         row_id = super().insert(obj)
         statement = f"INSERT INTO {cls.index_name()} VALUES (?, ?, ?, ?, ?)"
         values = (row_id,) + obj.bbox
-        db.execute(statement, values)
-        print(statement, values)
+        get_db().execute(statement, values)
+        # print(statement, values)
+        get_db().commit()
 
     @classmethod
     def select(cls):
@@ -81,4 +80,4 @@ class GeoTable(Table):
         """
         values = (x, x, y, y)
         print(statement, values)
-        return super()._extract_rows(db.execute(statement, values).fetchall())
+        return super()._extract_rows(get_db().execute(statement, values).fetchall())
