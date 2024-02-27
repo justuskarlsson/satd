@@ -3,7 +3,7 @@ from functools import wraps
 from typing import ClassVar
 import sqlite3
 from sqlite3 import Connection
-
+import os
 
 PRIMARY_KEY = "PRIMARY KEY"
 
@@ -30,7 +30,6 @@ def str_join(*args, sep=" "):
 
 @dataclass
 class Table:
-
     @classmethod
     def create_table(cls):
         table_name = cls.__name__
@@ -66,22 +65,6 @@ class Table:
             else:
                 raise Exception(f"{type(val)} has no method __to_db__")
         return row
-
-    # NOTE: Is not compatible with rtree since we need each inserted ID
-    # @classmethod
-    # def insert_many(cls, objs: list):
-    #     field_names = [
-    #         field.name for field in fields(cls) if PRIMARY_KEY not in field.metadata
-    #     ]
-    #     rows = [cls._get_insert_row(obj) for obj in objs]            
-
-    #     qs = ", ".join(["?"] * len(field_names))
-    #     statement = (
-    #         f"INSERT INTO {cls.__name__} ({', '.join(field_names)}) VALUES ({qs});"
-    #     )
-    #     print(statement, rows)
-    #     get_db().executemany(statement, rows)
-    #     get_db().commit()
 
     @classmethod
     def insert(cls, obj):

@@ -1,6 +1,10 @@
+import os
+from glob import glob
+import numpy as np
+
 from satd.db.geo_table import GeoTable, dataclass, Bbox
 from satd.search import Feature
-
+import satd.raster as raster
 
 @dataclass(kw_only=True)
 class SentinelImage(GeoTable):
@@ -28,7 +32,12 @@ class SentinelImage(GeoTable):
             s3_href=data["assets"]["PRODUCT"]["alternate"]["s3"]["href"],
         )
 
-
+    def get_rgb(self, dir_path: str, lev: int = 2) -> np.ndarray:
+        row_dir = os.path.join(dir_path, self.id_str)
+        imgs = sorted(glob(row_dir + "/GRANULE/*/IMG_DATA/*/*B0*_10m.jp2"))
+        rgb = list(reversed(imgs[:3]))
+        return raster.read_rgb(rgb, lev)
+    
 __all__ = [
     SentinelImage.__name__,
 ]
