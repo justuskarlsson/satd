@@ -38,6 +38,12 @@ class SentinelImage(GeoTable):
         rgb = list(reversed(imgs[:3]))
         return raster.read_rgb(rgb, lev)
     
+    def get_rgb_photos(self, dir_path: str) -> list[raster.Photo]:
+        row_dir = os.path.join(dir_path, self.id_str)
+        imgs = sorted(glob(row_dir + "/GRANULE/*/IMG_DATA/*/*B0*_10m.jp2"))
+        rgb = list(reversed(imgs[:3]))
+        return [raster.Photo(path) for path in rgb]
+    
 __all__ = [
     SentinelImage.__name__,
 ]
