@@ -9,6 +9,7 @@ from PIL import Image
 import numpy as np
 import utm
 from dataclasses import dataclass
+import math
 
 gdal.UseExceptions()
 
@@ -20,6 +21,7 @@ def normalize_uint8(data):
     data = data.astype(np.uint8)
     data = np.expand_dims(data, 2)
     return data
+
 
 class Photo:
     def __init__(self, band_path: str):
@@ -45,9 +47,7 @@ class Photo:
     def get_geod_center(self):
         return self.get_geod_pos(self.full_xs // 2, self.full_ys // 2)
 
-    def __post_init__(self):
-        self.buffer = np.array([])
-
+    # TODO: Remove, or rename to read_overview
     def read(self, lev: int = 0) -> np.ndarray:
         band = self.ds.GetRasterBand(1)
         if lev >= 0:
@@ -57,7 +57,45 @@ class Photo:
             data = band.ReadAsArray()
         return normalize_uint8(data)
 
+    # Test by calling with const lon, lat, lon2, lat2
+    def read_aoi(self, lon1, lat1, lon2, lat2, xs, ys):
+        # Conv lat lon -> utm
 
+        tl_east, x_east, x_north, tl_north, y_east, y_north = self.ds.GetGeoTransform()
+        print(x_east, x_north)
+        print(lon1, lat1, lon2, lat2)
+        (e1, n1, *_) = utm.from_latlon(lat1, lon1)
+        (e2, n2, *_) = utm.from_latlon(lat2, lon2)
+        print(e1, n1, e2, n2)
+        clamp = lambda x, x_min, x_max: min(max(x, x_min), x_max)
+        x1 = math.floor((e1 - tl_east) / x_east)
+        y1 = math.floor((n1 - tl_north) / y_north)
+        x2 = math.ceil((e2 - tl_east) / x_east)
+        y2 = math.ceil((n2 - tl_north) / y_north)
+        x1 = clamp(x1, 0, self.full_xs - 1)
+        y1 = clamp(y1, 0, self.full_ys - 1)
+        x2 = clamp(x2, 0, self.full_xs - 1)
+        y2 = clamp(y2, 0, self.full_ys - 1)
+        window_xs = x2 - x1
+        window_ys = y2 - y1
+        if window_xs <= 0 or window_ys <= 0:
+            print("Not in view")
+            return
+
+        band: gdal.Band = self.ds.GetRasterBand(1)
+        # Construct np.array using xs, ys, send as 'buf_obj'
+        data = np.zeros((ys, xs), dtype=np.uint16)
+        band.ReadAsArray(x1, y1, window_xs, window_ys, buf_obj=data)
+        # data = np.flip(data, 0)
+        return normalize_uint8(data)
+
+    @staticmethod
+    def read_all_aoi(photos: list["Photo"], lon1, lat1, lon2, lat2, xs, ys):
+        data = []
+        for photo in photos:
+            data.append(photo.read_aoi(lon1, lat1, lon2, lat2, xs, ys))
+        data = np.concatenate(data, axis=2)
+        return Image.fromarray(data)
 
 
 def read_band(band_path, lev=2):
@@ -86,7 +124,6 @@ if __name__ == "__main__":
     img = Image.fromarray(rgb)
     # png takes such a long time
     img.save("resources/images/tmp.jpg")
-
 
 
 """
